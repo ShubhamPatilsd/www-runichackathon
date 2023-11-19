@@ -1,5 +1,6 @@
 import { PhotoGrid } from "@/components/PhotoGrid";
 import { FiCalendar, FiMapPin } from "react-icons/fi";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 export default function Home() {
   return (
@@ -38,13 +39,15 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="mt-6 space-y-1">
+              <div className="mt-6 flex flex-col space-y-1">
                 <p>I'm interested:</p>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="rounded-lg bg-white w-full border-2 border-[#7100E1] text-gray-700 px-6 py-3"
-                />
+                <a
+                  href="https://register.runic.rsvp"
+                  className="flex space-x-2 items-center justify-center underline text-center rounded-md bg-[#7100E1] font-bold text-lg hover:bg-[#3C0177] transition w-full py-3"
+                >
+                  <span>Register</span>
+                  <HiOutlineExternalLink size={20} />
+                </a>
               </div>
             </div>
           </div>
