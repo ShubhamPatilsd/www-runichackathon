@@ -8,8 +8,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Meta as={Head} />
-      <Analytics />
       <Component {...pageProps} />
+      <Analytics />
     </div>
   );
 }
