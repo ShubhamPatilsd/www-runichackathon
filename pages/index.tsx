@@ -27,23 +27,28 @@ export default function Home() {
   const isVisible = useIsVisible(loadRef);
   const [showTitle, setShowTitle] = useState(1);
   useEffect(() => {
+    const seen = localStorage.getItem("titleSeen");
+    if (seen != null) {
+      setShowTitle(0);
+      return;
+    }
     const media = window.matchMedia(
       "(max-aspect-ratio: 18/9) and (min-aspect-ratio: 14/9)"
     );
-    if (media.matches !== true) {
+    if (media.matches !== true || seen != null) {
       setShowTitle(0);
     } else {
       setShowTitle(1);
       setTimeout(() => {
         setShowTitle(0);
+        localStorage.setItem("titleSeen", "true");
       }, 7400);
     }
     const listener = () => {
-      if (media.matches !== true) {
-        console.log("DFA");
+      if (media.matches !== true || seen != null) {
         setShowTitle(0);
       } else {
-        console.log("OHDF");
+        localStorage.setItem("titleSeen", "true");
         setShowTitle(1);
         setTimeout(() => {
           setShowTitle(0);
