@@ -1,4 +1,4 @@
-import { FaBrain } from "react-icons/fa";
+import { FaBrain, FaHammer, FaSmileBeam } from "react-icons/fa";
 
 export const WhatIsHackathon = () => {
   return (
@@ -19,10 +19,10 @@ export const WhatIsHackathon = () => {
         </h4>
       </div>
 
-      <div className="mt-5 md:mt-[5vh] space-y-6 mx-auto max-w-[1300px]">
-        <div className="grid grid-cols-2 gap-6">
+      <div className="mt-5 md:mt-[5vh] space-y-6 mx-auto max-w-[800px]">
+        <div className="grid grid-cols-1 gap-6">
           <div className="border-2 border-accent p-4 md:p-8 space-y-3">
-            <div className="flex itesm-center space-x-3">
+            <div className="flex items-center space-x-3">
               <FaBrain size={30} className="text-accent" />
               <p className="text-xl font-black">Learn Something New</p>
             </div>
@@ -36,10 +36,10 @@ export const WhatIsHackathon = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           <div className="border-2 border-accent p-4 md:p-8 space-y-3">
-            <div className="flex itesm-center space-x-3">
-              <FaBrain size={30} className="text-accent" />
+            <div className="flex items-center space-x-3">
+              <FaHammer size={30} className="text-accent" />
               <p className="text-xl font-black">Build Amazing Projects</p>
             </div>
             <p>
@@ -51,10 +51,10 @@ export const WhatIsHackathon = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           <div className="border-2 border-accent p-4 md:p-8 space-y-3">
-            <div className="flex itesm-center space-x-3">
-              <FaBrain size={30} className="text-accent" />
+            <div className="flex items-center space-x-3">
+              <FaSmileBeam size={30} className="text-accent" />
               <p className="text-xl font-black">Create Amazing Memories</p>
             </div>
             <p>

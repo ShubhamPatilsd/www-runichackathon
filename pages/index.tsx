@@ -5,6 +5,9 @@ import Lottie from "lottie-react";
 import { useEffect, useState, useRef } from "react";
 import splash from "../public/splash2.json";
 import { WhatIsHackathon } from "@/components/WhatIsHackathon";
+import { Rundown } from "@/components/Rundown";
+import { FAQ } from "@/components/FAQ";
+import { Sponsors } from "@/components/Sponsors";
 
 export function useIsVisible(ref: any) {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -72,7 +75,7 @@ export default function Home() {
       <div
         ref={loadRef}
         className={`transition-opacity ease-in duration-700  ${
-          isVisible ? "opacity-100" : "opacity-0"
+          isVisible ? "opacity-100" : "opacity-100"
         } ${showTitle > 0 ? "hidden" : "block"}`}
       >
         <div className={`flex flex-col`}>
@@ -137,6 +140,23 @@ export default function Home() {
         </div>
         <div className="mt-6 md:mt-[7vh]">
           <WhatIsHackathon />
+        </div>
+
+        <div className="mt-6 md:mt-[7vh]">
+          <Rundown />
+        </div>
+
+        <div className="mt-6 md:mt-[7vh]">
+          <Sponsors />
+        </div>
+
+        <div className="pt-6 md:pt-[7vh] relative">
+          <FAQ />
+          <img
+            src="/blob.svg"
+            className="gridImage opacity-75 select-none absolute top-[50%] right-[10%]"
+            style={{ zIndex: -2 }}
+          />
         </div>
         <div
           className="h-10 w-screen fixed bottom-0"
