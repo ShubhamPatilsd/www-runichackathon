@@ -2,6 +2,10 @@ import { PhotoGrid } from "@/components/PhotoGrid";
 import { FiCalendar, FiMapPin } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import Lottie from "lottie-react";
+import Image from "next/image";
+import p1 from "../public/p1.png";
+import p2 from "../public/p2.png";
+import p3 from "../public/p3.png";
 import { useEffect, useState, useRef } from "react";
 import splash from "../public/splash2.json";
 
@@ -10,7 +14,9 @@ export function useIsVisible(ref: any) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setIntersecting(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIntersecting(entry.isIntersecting);
+      }
     });
 
     observer.observe(ref.current);
@@ -127,13 +133,68 @@ export default function Home() {
               <img src="/photogrid.png" className="gridImage select-none" />
             </div>
           </main>
-          <p className="max-w-4xl text-lg mx-auto text-center p-6 md:p-0">
-            Runic is going to be an in-person hackathon in the Bay Area. Join us
-            in 24 hours of hacking, workshops, and making connections. No prior
-            coding experience? No problem! We'll provide all the support you
-            need to learn coding and leave with a new skill.
-          </p>
+          <main
+            className={` max-w-full mt-8 gap-[5%]  md:px-12 md:pb-6 lg:px-24 lg:pb-12`}
+          >
+            <p className="max-w-4xl text-lg lg:text-2xl mx-auto text-center px-6 md:p-0">
+              Runic is going to be an in-person hackathon in the Bay Area. Join
+              us in 24 hours of hacking, workshops, and making connections. No
+              prior coding experience? No problem! We'll provide all the support
+              you need to learn coding and leave with a new skill.
+            </p>
+
+            <div className="text-center mt-32  px-12 lg:px-32 lg:pr-[5%]">
+              <h1
+                className=" text-5xl lg:text-7xl
+				"
+              >
+                Hackathon?
+              </h1>
+              <p className="text-2xl  md:p-0 text-gray-400">
+                Don&apos;t worry, there&apos;ll be no hacking involved.
+              </p>
+              <div className="text-xl md:text-2xl mt-4">
+                A <span className="text-purple-400 font-bold">hackathon</span>{" "}
+                is a social event where people get together to code{" "}
+                <span className="text-orange-400 font-bold">awesome</span>{" "}
+                projects in a{" "}
+                <span className="text-red-400 font-bold">limited time</span>.
+                Our hackathon will welcome beginners, experts, and everybody in
+                between!
+                <div className="flex items-center mt-8 justify-center">
+                  <div className="grid  gap-4">
+                    <div className="grid grid-cols-1  gap-4 my-auto">
+                      <div>
+                        <img
+                          className="w-auto max-w-full rounded-lg "
+                          src="/p1.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <img
+                          className="h-auto max-w-full rounded-lg"
+                          src="/p2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="h-auto max-w-full float-right rounded-lg"
+                          src="/p3.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
+        {/*
         <div
           className="h-10 w-screen fixed bottom-0"
           style={{
@@ -141,7 +202,7 @@ export default function Home() {
             background:
               "linear-gradient(180deg, rgba(113, 0, 225, 0.00) 0%, #7100E1 100%)",
           }}
-        ></div>
+        ></div> */}
       </div>
     </div>
   );
