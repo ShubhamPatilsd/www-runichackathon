@@ -7,7 +7,7 @@ export const Sponsors = () => {
       <div className="mx-auto px-2 md:px-6 max-w-5xl">
         <h1 className="text-3xl md:text-4xl text-left px-2 mb-4">Sponsors</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4	px-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4	px-[10vw] md:px-2">
           <SponsorBox
             header={"HCB"}
             text={"Allows us to manage our finances and make Runic work!"}

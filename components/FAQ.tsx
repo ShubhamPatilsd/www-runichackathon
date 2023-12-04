@@ -1,6 +1,10 @@
 import { FAQBox } from "./FAQBox";
 const info = [
   {
+    header: "Where is Runic?",
+    text: "You will get an email with more relevant information after signing up!",
+  },
+  {
     header: "What do I need?",
     text: "Your laptop, chargers, anything for your hack (hardware?), sleeping bags, water bottles, and an open mind.",
   },
