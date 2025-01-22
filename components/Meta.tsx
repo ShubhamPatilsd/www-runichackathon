@@ -40,6 +40,10 @@ const Meta = ({
       name="twitter:title"
       content={makeTitle(title, name)}
     />
+    <meta
+      name="keywords"
+      content="inseek, file, file search, getinseek, ai file search, describing files, spotlight, raycast, raycast file search, raycast file search slow, organize file, mac file, mac, apple, image finder, ai images, ai file"
+    />
     {description && (
       <>
         <meta key="desc" name="description" content={description} />
